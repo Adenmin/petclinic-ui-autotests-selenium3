@@ -11,6 +11,16 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+allprojects {
+
+    dependencies {
+        apply plugin: 'java'
+        compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+        testCompile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.8.1'
+    }
+
+}
+
+task Alltest() {
+    dependsOn subprojects.test
 }

@@ -1,2 +1,5 @@
 rootProject.name = 'petclinic-ui-autotests-selenium3'
+include 'junit5'
+include 'junit4'
+include 'testNG'
 
